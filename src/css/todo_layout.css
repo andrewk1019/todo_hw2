@@ -1,0 +1,236 @@
+/* FRAMES THE WEB APPLICATION */
+body {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 5%;
+}
+
+/* SCREENS */
+#todo_home {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  padding: 5px 10px 5px 10px;
+}
+#todo_list {}
+#todo_item {}
+
+/* HOME SCREEN CONTROLS */
+#home_your_lists_container {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+}
+#home_your_lists_heading {}
+#home_your_lists_list {}
+#home_banner_container {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 1;
+  cursor: default;
+}
+#home_new_list_container {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  display: flex;
+}
+#home_new_list_button, .item_button {
+  margin: auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* HOME SCREEN CLASSES */
+.home_list_link {}
+
+/* LIST SCREEN CONTROLS */
+#list_heading {}
+#list_trash {
+  position: absolute;
+  left: 85%;
+  width: 15%;
+  text-align: right;
+  top: 5%;
+}
+#list_details_container {
+  padding-left: 2%;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  grid-gap: 5px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+#list_details_name_container {}
+#list_name_prompt {}
+#list_name_textfield {}
+#list_details_owner_container {}
+#list_owner_prompt {}
+#list_owner_textfield {}
+#list_items_container {}
+
+/* LIST SCREEN CLASSES */
+.list_item_card, .list_item_add_card, .list_item_header_card {
+  visibility: visible;
+  position: relative;
+  height: 50px;
+  grid-row-gap: 0px;
+  grid-column-gap: 50px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.list_item_card_description {
+  position: absolute;
+  left: 2%;
+}
+.list_item_task_header, .list_item_due_date_header, .list_item_status_header {
+  position: absolute;
+  top: 5%;
+}
+.list_item_card_assigned_to, .list_item_card_due_date, 
+.list_item_card_completed, .list_item_card_not_completed {
+  position: absolute;
+  top: 50%;
+}
+.move_item_up {
+  display: "block";
+  position: absolute;
+  top: 0%;
+  left: 83%;
+}
+.move_item_down {
+  display: "block";
+  position: absolute;
+  top: 0%;
+  left: 89%;
+}
+.delete_item {
+  display: "block";
+  position: absolute;
+  left: 95%;
+}
+.list_item_task_header, .list_item_card_assigned_to {
+  left: 2%;
+}
+.list_item_due_date_header, .list_item_card_due_date {
+  left: 35%;
+}
+.list_item_status_header, .list_item_card_completed, .list_item_card_not_completed {
+  left: 60%;
+}
+.list_item_card_toolbar {
+  position: absolute;
+  left: 85%;
+  width: 15%;
+  top: 5%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.list_item_card_button {
+  text-align: center;
+  border-radius: 5px;
+  margin: 1%;
+}
+.list_item_add_card {
+  text-align: center;
+  vertical-align: center;
+}
+
+/* ITEM SCREEN CONTROLS */
+#item_heading {}
+#item_form_container {
+  display: block; 
+  position: fixed;
+  width: 80%;
+  height: 40%;
+  top: 5%;
+  background-color: var(--swatch-primary);
+}
+#item_description_prompt {
+  position: absolute;
+  left: 0%;
+  top: 14%;
+}
+#item_description_textfield {
+  display: block;
+  position: absolute;
+  height: 10%;
+  width: 78%;
+  border-radius: 5px;
+  top: 13%;
+  left: 19.5%;
+
+}
+#item_assigned_to_prompt {
+  position: absolute;
+  left: 0%;
+  top: 30%;
+
+}
+#item_assigned_to_textfield {
+  display: block;
+  position: absolute;
+  height: 10%;
+  width: 78%;
+  border-radius: 5px;
+  top: 29%;
+  left: 19.5%;
+
+}
+#item_due_date_prompt {
+  position: absolute;
+  left: 0;
+  top: 46%;
+
+}
+#item_due_date_picker {
+  display: block;
+  position: absolute;
+  height: 10%;
+  width: 78%;
+  border-radius: 5px;
+  top: 45%;
+  left: 19.5%;
+}
+#item_completed_prompt {
+  position: absolute;
+  left: 0;
+  top: 61%;
+
+}
+#item_completed_checkbox {
+  display: block;
+  position: absolute;
+  top: 62%;
+  left: 19%;
+
+
+}
+#item_form_submit_button, #item_form_edit_submit_button {
+  display: blocK;
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  left: 1%;
+  top: 80%;
+  border-radius: 5px;
+}
+
+#item_form_cancel_button {
+  display: blocK;
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  top: 80%;
+  left: 12%;
+  border-radius: 5px;
+}
+
+/* ITEM SCREEN CLASSES */
+.item_prompt {
+  grid-column: 1 / 4;
+}
+.item_input {
+  grid-column: 2 / 4;
+}
